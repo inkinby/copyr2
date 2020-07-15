@@ -1,0 +1,14 @@
+Python 3.7.5 (tags/v3.7.5:5c02a39a0b, Oct 14 2019, 23:09:19) [MSC v.1916 32 bit (Intel)] on win32
+Project Flask Jinja2
+
+Package      Version
+------------ -------
+click        7.1.2
+Flask        1.1.2
+itsdangerous 2.0.0a1
+Jinja2       3.0.0a1
+MarkupSafe   2.0.0a1
+pip          20.1.1
+PyMySQL      0.9.3
+setuptools   39.0.1
+Werkzeug     1.0.1

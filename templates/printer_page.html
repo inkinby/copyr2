@@ -1,0 +1,15 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Printer page
+
+{% endblock %}
+
+{% block content %}
+    <span class="badge badge-primary">{{ post['name'] }}</span>
+    <p>{{ post['description'] }}</p>
+    <p>{{ post['part_number'] }}</p>
+{% endblock %}

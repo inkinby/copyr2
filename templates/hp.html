@@ -1,0 +1,50 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+
+    HP Совместимые расходные материалы
+
+{% endblock %}
+
+{% block content_title %}
+{% endblock %}
+
+{% block content %}
+
+<div class="">
+    <h4>HP LaserJet Pro</h4>
+    <p>
+    {% for row in data_printers %}
+        <tr>
+            <td><a href="{{ url_for('post', part_number=row['part_number'], name=row['name'] ) }}">{{ row['name'] }}</a></td>
+{#            <td><a href="{{ row.part_number }}">{{ row.part_number }}</a></td>#}
+        </tr>
+    {% endfor %}
+    </p>
+    <h3>Таблица совместимых расходных материалов HP</h3>
+    <table id="gijuns" style="width:100%">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>part number</th>
+                <th>description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in data_cartridges %}
+            <tr>
+                <td><a class="badge badge-primary", href="{{ row.part_number }}"> {{ row.name }}</a></td>
+
+                <td><a href="{{ url_for('post', part_number=row.part_number) }}">{{ row.part_number }}</a></td>
+                <td>{{ row.description}}</td>
+
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

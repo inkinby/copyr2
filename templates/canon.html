@@ -1,0 +1,40 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Canon Совместимые расходные материалы
+
+{% endblock %}
+
+{% block content_title %}
+{% endblock %}
+
+{% block content %}
+
+<div class="">
+    <h4>Bucket List</h4>
+    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    <h3>Таблица совместимых расходных материалов Canon</h3>
+    <table id="gijuns" style="width:100%">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>part number</th>
+                <th>description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in resultcanon %}
+            <tr>
+                <td><a class="badge badge-primary", href="{{ url_for('post', part_number=row.part_number) }}">{{ row['name'] }}</a></td>
+                <td><a href="{{ url_for('post', part_number=row.part_number) }}">{{ row.part_number }}</a></td>
+                <td>{{ row.description }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Копир Home page
+
+{% endblock %}
+
+{% block content_title %}
+
+<div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3"> КОПИР</h1>
+            <p class="lead">База данных совместимости картриджей, тонеров, принтеров, копиров, факсов и МФУ</p>
+        </div>
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row marketing">
+        <div class="col-lg-6">
+                <h4>Bucket List</h4>
+                <p>
+                {% for row in result3 %}
+                <tr>
+                    <td><a href="{{ url_for('post', part_number=row.part_number) }}">{{ row['part_number'] }}</a></td>
+                    <td><a href="">{{ row['cartrige.part_number'] }}</a></td>
+
+                </tr>
+                <span></span>
+                <hr>
+                {% endfor %}
+                </p>
+
+                <h4>Bucket List</h4>
+                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+                <h4>Bucket List</h4>
+                <p>
+                {% for row in result2 %}
+                        <tr>
+                            <td><a href="">{{ row.name }}</a></td>
+                            <td><a class="badge badge-primary", href="">{{ row['group_concat(cartrige.name)'] }}</a></td>
+
+                        </tr>
+                        <span></span>
+                        <hr>
+                    {% endfor %}
+                </p>
+        </div>
+
+        <div class="col-lg-6">
+            <h4>Bucket List</h4>
+            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+            <h4>Bucket List</h4>
+            <p>
+
+
+            </p>
+
+            <h3>messages list</h3>
+
+            {% for row in result %}
+                <tr>
+                    <td><a href="">{{ row.name }}</a></td>
+                    <td><a class="badge badge-primary", href="">{{ row['cartrige.name'] }}</a></td>
+
+                </tr>
+                <span></span>
+                <hr>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

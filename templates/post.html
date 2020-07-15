@@ -1,0 +1,23 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+
+    POST page
+
+{% endblock %}
+
+{% block content %}
+{% if post.part_number == "CB410A" %}
+    <span class="badge badge-primary">{{ post['name'] }}</span>
+    <p>{{ post['title'] }}</p>
+    <p>{{ post['part_number'] }} </p>
+    <td>Чип: {{ post['chip_info'] }}</td>
+{% else %}
+    <p>{{ post2['title'] }}</p>
+{% endif %}
+    <span class="badge badge-primary">{{ post2['title'] }}</span>
+    <p>{{ post2['title'] }} </p>
+    <td>Чип: {{ post2['chip_info'] }}</td>
+{% endblock %}
