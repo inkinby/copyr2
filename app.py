@@ -43,7 +43,7 @@ def get_post(part_number):
         #"JOIN cartrige on cartrige.cartrige_id = printer_cartrige.cartrige_cartrige_id group by printer.printer_id")
         cursor.execute("SELECT * FROM view_name WHERE part_number='%s'" % (part_number,))
         post = cursor.fetchone()
-        print(post)
+        # print(post)
         cursor.close()
 
     if post is None:
@@ -55,7 +55,7 @@ def get_post2(part_number):
     with connection.cursor() as cursor:
         cursor.execute("SELECT * FROM view_name WHERE part_number='%s'" % (part_number,))
         post = cursor.fetchone()
-        print(post)
+        # print(post)
         cursor.close()
 
     if post is None:

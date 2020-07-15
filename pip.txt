@@ -1,5 +1,12 @@
 Python 3.7.5 (tags/v3.7.5:5c02a39a0b, Oct 14 2019, 23:09:19) [MSC v.1916 32 bit (Intel)] on win32
-Project Flask Jinja2
+Project on Flask (Jinja2)
+
+
+Project Interpreter 
+Name: Python 3.7 (copyr2)
+Interpreter Path: C:\python_pro\copyr2\venv\Scripts\python.exe
+(venv) C:\python_pro\copyr2>
+
 
 Package      Version
 ------------ -------
